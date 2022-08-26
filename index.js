@@ -1,7 +1,9 @@
 function isPalindrome(word) {
-  var reversed = word.split("").reverse().join("");
-  var lowerCaseReversed = reversed.toLowerCase()
-  if(lowerCaseReversed === word) {
+  var reg = /[\W_]/g;
+  var lowerCase = word.toLowerCase().replace(reg, " ")
+  var reversed = lowerCase.split("").reverse().join("");
+  console.log(reversed)
+  if(reversed === lowerCase) {
     return true
   }else {
     return false
@@ -9,7 +11,7 @@ function isPalindrome(word) {
 
 }
 
-isPalindrome("RED")
+isPalindrome("RED111")
 
 /* 
   Add your pseudocode here
